@@ -1,0 +1,8 @@
+catboost         0.23
+hyperopt         0.2.4
+imblearn
+lightgbm         2.3.1
+matplotlib       3.2.1
+scikit-learn     0.22.2.post1
+seaborn          0.10.1
+xgboost          1.0.2
