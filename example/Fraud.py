@@ -110,16 +110,19 @@ def clean_data(train, test):
     )
     return x_train, x_valid, y_train, y_valid, x_test, cols, user_id
 
-
+# 讀取現成檔案
 data_set = GetData('fraud').load_data()
 
+# 資料整理
 x_train, x_valid, y_train, y_valid, x_test, cols, user_id = clean_data(data_set['train'], data_set['test'])
 
+# 將資料集丟給LazyClassifier
 clf = LazyClassifier(x_train, y_train, x_valid, y_valid, x_test)
 
+# 讀取預設模型參數，可自行調整範圍
 model_dict = clf.hyper_dict
 
-
+# 訓練模型~
 for k, v in model_dict.items():
     print()
     print(k)
